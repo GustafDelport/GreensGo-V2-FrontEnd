@@ -16,7 +16,7 @@ class NotFoundComponent extends Component {
                     <Content>
                         <div className="content-inner">
                             <div>
-                                <h4>Jy is verlore</h4>
+                                <h4>This page is lost</h4>
                             </div>
                         </div>
                     </Content>

@@ -4,7 +4,7 @@ import {Footer} from "rsuite";
 class FooterComponent extends Component {
     render() {
         return (
-            <Footer style={{textAlign: 'center'}}>Copyright © {new Date().getFullYear()}</Footer>
+            <Footer style={{textAlign: 'center'}}>Copyright ©GreensGo {new Date().getFullYear()}</Footer>
         );
     }
 }
