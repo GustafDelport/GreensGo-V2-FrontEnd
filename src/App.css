@@ -128,8 +128,12 @@ margin: 0.6rem 1rem 0.6rem 1rem;
   min-height: 100px;
 }
 
+.rs-panel span {
+  font-size: 1.25rem;
+}
+
 .rs-table {
-  border-radius: 1.25rem !important;
+  border-radius: 1.75rem !important;
 }
 
 .rs-panel-shaded{

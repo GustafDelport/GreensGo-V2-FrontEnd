@@ -75,7 +75,7 @@ class TableComponent extends Component {
         if (filteredData && data) {
             return (
                 <div>
-                    <Table height={420} data={filteredData} loading={loading}>
+                    <Table height={620} data={filteredData} loading={loading}>
                         <Column width={200} align="center" resizable>
                             <HeaderCell>Time</HeaderCell>
                             <Cell dataKey="Time" />
@@ -128,7 +128,7 @@ class TableComponent extends Component {
         } else {
             return (
                 <div>
-                    <Table height={420} data={data} loading={true}>
+                    <Table height={820} data={data} loading={true}>
                         <Column width={200} align="center" resizable>
                             <HeaderCell>Time</HeaderCell>
                             <Cell dataKey="Time" />
