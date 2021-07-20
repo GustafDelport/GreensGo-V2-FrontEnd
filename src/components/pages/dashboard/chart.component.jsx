@@ -114,17 +114,12 @@ class ChartComponent extends Component {
                     }}
                     
                     options = {{
-                        responsive:true,
-                        scales:{
-                            yAxes:{
-                                ticks:{
-                                    beginAtZero: true
-                                }
-                            }
-                        }
+                        maintainAspectRatio: false ,
+                        responsive: true
+                        
                     }}
-                    height = {0}
-                    width = {0}
+                    height = {500}
+                    width = {500}
                 />
             </div>
         );
