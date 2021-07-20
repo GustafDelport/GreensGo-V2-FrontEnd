@@ -40,7 +40,7 @@ class ChartComponent extends Component {
         )
     }
 
-    componentDidMount() {
+    componentWillMount() {
         DataService.getAllAPI().then(
             res => {
                 console.log(res.data);
@@ -61,13 +61,13 @@ class ChartComponent extends Component {
 
     render() {
         return (
-            <div>
+            <div className="scroll-horizental-histo">
 
                 <Bar
                     data = {{
                         labels: TimeData.slice(Math.max(TimeData.length - 5, 0)),
                         datasets:[{
-                            label: 'Tempreture',
+                            label: 'Temperature',
                             data: TemperatureData.slice(Math.max(TemperatureData.length - 5, 0)),
                             
                             backgroundColor: [
@@ -113,17 +113,67 @@ class ChartComponent extends Component {
                         }]
                     }}
                     
-                    options = {{
-                        maintainAspectRatio: false ,
-                        responsive: true
-                        
-                    }}
+                    options = {options}
                     height = {500}
-                    width = {500}
+                    width = {1200}
                 />
             </div>
         );
     }
 }
+
+   //=========================================================================================
+
+   const options = {
+    legend: {
+        display: false
+    },
+    maintainAspectRatio: false,
+    responsive: true,
+    tooltips: {
+        mode: 'label'
+    },
+    elements: {
+        line: {
+            fill: false
+        }
+    },
+    scales: {
+        xAxes: [
+            {
+                barThickness: 'flex',
+                display: true,
+                gridLines: {
+                    display: false
+                },
+                
+                ticks: {
+                    autoSkip: false,
+                    maxRotation: 45,
+                    minRotation: 45
+                }
+            }
+        ],
+        yAxes: [
+            {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                id: 'y-axis-1',
+                gridLines: {
+                    display: false
+                },
+                labels: {
+                    show: false
+                },
+                ticks: {
+                    beginAtZero: true
+                }
+            }
+        ]
+    }
+}
+
+//=========================================================================================
 
 export default ChartComponent;
