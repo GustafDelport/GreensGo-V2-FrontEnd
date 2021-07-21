@@ -17,27 +17,27 @@ class ChartComponent extends Component {
     constructor(props) {
         super(props);
 
-        DataService.getAllAPI().then(
-            res => {                
-                // for (const dataObj of res.data) {
-                //     TemperatureData.push(dataObj.Temperature)
-                //     TimeData.push(dataObj.Time)
-                //     HumidityData.push(dataObj.HumidityPercentage)
-                //     MoistureData.push(dataObj.MoisturePercentage)
-                //     LightData.push(dataObj.LightIndex)
-                // }
-            },
-            err => {
-                const resMessage =
-                    (err.response &&
-                        err.response.data &&
-                        err.response.data.message) ||
-                    err.message ||
-                    err.toString();
+        // DataService.getAllAPI().then(
+        //     res => {                
+        //         for (const dataObj of res.data) {
+        //             TemperatureData.push(dataObj.Temperature)
+        //             TimeData.push(dataObj.Time)
+        //             HumidityData.push(dataObj.HumidityPercentage)
+        //             MoistureData.push(dataObj.MoisturePercentage)
+        //             LightData.push(dataObj.LightIndex)
+        //         }
+        //     },
+        //     err => {
+        //         const resMessage =
+        //             (err.response &&
+        //                 err.response.data &&
+        //                 err.response.data.message) ||
+        //             err.message ||
+        //             err.toString();
 
-                Alert.error(resMessage);
-            }
-        )
+        //         Alert.error(resMessage);
+        //     }
+        // )
     }
 
     componentWillMount() {
