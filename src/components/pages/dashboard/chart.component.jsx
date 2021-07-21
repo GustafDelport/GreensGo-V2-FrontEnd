@@ -19,13 +19,13 @@ class ChartComponent extends Component {
 
         DataService.getAllAPI().then(
             res => {                
-                for (const dataObj of res.data) {
-                    TemperatureData.push(dataObj.Temperature)
-                    TimeData.push(dataObj.Time)
-                    HumidityData.push(dataObj.HumidityPercentage)
-                    MoistureData.push(dataObj.MoisturePercentage)
-                    LightData.push(dataObj.LightIndex)
-                }
+                // for (const dataObj of res.data) {
+                //     TemperatureData.push(dataObj.Temperature)
+                //     TimeData.push(dataObj.Time)
+                //     HumidityData.push(dataObj.HumidityPercentage)
+                //     MoistureData.push(dataObj.MoisturePercentage)
+                //     LightData.push(dataObj.LightIndex)
+                // }
             },
             err => {
                 const resMessage =
@@ -45,6 +45,13 @@ class ChartComponent extends Component {
             res => {
                 console.log(res.data);
                 data = res.data
+                for (const dataObj of data) {
+                    TemperatureData.push(dataObj.Temperature)
+                    TimeData.push(dataObj.Time)
+                    HumidityData.push(dataObj.HumidityPercentage)
+                    MoistureData.push(dataObj.MoisturePercentage)
+                    LightData.push(dataObj.LightIndex)
+                }
             },
             err => {
                 const resMessage =
