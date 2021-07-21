@@ -72,10 +72,10 @@ class ChartComponent extends Component {
 
                 <Bar
                     data = {{
-                        labels: TimeData.slice(Math.max(TimeData.length - 5, 0)),
+                        labels: TimeData.slice(Math.max(TimeData.length - 10, 0)),
                         datasets:[{
                             label: 'Temperature',
-                            data: TemperatureData.slice(Math.max(TemperatureData.length - 5, 0)),
+                            data: TemperatureData.slice(Math.max(TemperatureData.length - 10, 0)),
                             
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)'
@@ -86,7 +86,7 @@ class ChartComponent extends Component {
                             borderWidth: 3
                         },{
                             label: 'Humidity',
-                            data: HumidityData.slice(Math.max(HumidityData.length - 5, 0)),
+                            data: HumidityData.slice(Math.max(HumidityData.length - 10, 0)),
                             
                             backgroundColor: [
                                 'rgba(54, 162, 235, 0.2)',
@@ -97,7 +97,7 @@ class ChartComponent extends Component {
                             borderWidth: 3
                         },{
                             label: 'Moisture',
-                            data: MoistureData.slice(Math.max(MoistureData.length - 5, 0)),
+                            data: MoistureData.slice(Math.max(MoistureData.length - 10, 0)),
                             
                             backgroundColor: [
                                 'rgba(255, 206, 86, 0.2)'
@@ -108,7 +108,7 @@ class ChartComponent extends Component {
                             borderWidth: 3
                         },{
                             label: 'Light',
-                            data: LightData.slice(Math.max(LightData.length - 5, 0)),
+                            data: LightData.slice(Math.max(LightData.length - 10, 0)),
                             
                             backgroundColor: [
                                 'rgba(153, 102, 255, 0.2)'
