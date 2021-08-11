@@ -32,7 +32,7 @@ class LightComponent extends Component {
         return (
             <Panel header="Light Index" shaded>
                 <FontAwesomeIcon icon={faSun} />
-                <span style={{marginLeft: '0.5rem'}}>{light}</span>
+                <span style={{marginLeft: '0.5rem'}}>{light}%</span>
             </Panel>
         );
     }
